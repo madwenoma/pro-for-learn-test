@@ -32,7 +32,7 @@ public class TestSpringConverter {
 	@Test
 	public void demoStringToInteger() {
 		Assert.assertTrue(service.canConvert(String.class, Integer.class));
-		String intStr = "100ss";
+		String intStr = "100";
 		System.out.println(service.convert(intStr, Integer.class));
 	}
 	
