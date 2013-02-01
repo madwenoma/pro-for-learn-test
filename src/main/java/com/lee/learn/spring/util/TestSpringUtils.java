@@ -112,7 +112,7 @@ public class TestSpringUtils {
 	
 	@Test
 	public void demoStringUtils() {
-		StringUtils u = null;
+		StringUtils.tokenizeToStringArray("abcd,sbdc,eee", ",");
 		removeDulplicate(null,0);
 	}
 	
