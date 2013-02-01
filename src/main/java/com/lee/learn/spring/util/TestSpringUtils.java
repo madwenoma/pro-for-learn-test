@@ -10,6 +10,8 @@ import junit.framework.Assert;
 import org.junit.Test;
 import org.springframework.util.FileSystemUtils;
 import org.springframework.util.ReflectionUtils;
+import org.springframework.util.StringUtils;
+
 
 class Animal{
 	private int weight;
@@ -110,7 +112,14 @@ public class TestSpringUtils {
 	
 	@Test
 	public void demoStringUtils() {
+		StringUtils u = null;
+		removeDulplicate(null,0);
 	}
+	
+	private void removeDulplicate(String str, int id) {
+		org.springframework.util.Assert.notNull(str, "Path must not be null");
+	}
+	
 	
 	@Test
 	public void demoFileCopyUtils() {
