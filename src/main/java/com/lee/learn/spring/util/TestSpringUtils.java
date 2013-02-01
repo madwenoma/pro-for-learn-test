@@ -1,11 +1,14 @@
 package com.lee.learn.spring.util;
 
+import java.io.File;
+import java.io.IOException;
 import java.lang.reflect.Field;
 import java.lang.reflect.Method;
 
 import junit.framework.Assert;
 
 import org.junit.Test;
+import org.springframework.util.FileSystemUtils;
 import org.springframework.util.ReflectionUtils;
 
 class Animal{
@@ -108,4 +111,15 @@ public class TestSpringUtils {
 	@Test
 	public void demoStringUtils() {
 	}
+	
+	@Test
+	public void demoFileCopyUtils() {
+		try {
+			FileSystemUtils.copyRecursively(new File("E:\\tmp"), new File("E:\\tmp2"));
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+		Assert.assertTrue(FileSystemUtils.deleteRecursively(new File("E:\\tmp2")));
+	}
+	
 }
